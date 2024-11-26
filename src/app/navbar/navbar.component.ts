@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
-
+import { Component, EventEmitter, Output } from '@angular/core';
+import { MenuComponent } from '../menu/menu.component';
+import { CommonModule } from '@angular/common';
+CommonModule
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  imports: [CommonModule,MenuComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
@@ -14,4 +16,15 @@ export class NavbarComponent {
   Link5 = "Collezione"
   Link6 = "Info"
 
+  // Variabile per controllare la visibilità del menu
+  isMenuVisible: boolean = false;
+
+  // Metodo per alternare la visibilità del menu
+  toggleMenu(): void {
+    this.isMenuVisible = !this.isMenuVisible;
+  }
+  // Metodo per nascondere il menu quando viene emesso l'evento closeMenu
+  hideMenu(): void {
+    this.isMenuVisible = false;
+  }
 }
