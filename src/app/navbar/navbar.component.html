@@ -1,9 +1,8 @@
 <div class="row bg-navbar sticky-top">
     <div class="col-1 my-auto">
         <div class="btn btn-group dropdown d-lg-none">
-            <i (click)="toggleMenu()" class="bi bi-list text-light display-3 " style="cursor: pointer;"></i>
+            <i (click)="onMenuClick()" class="bi bi-list text-light display-3 " style="cursor: pointer;"></i>
         </div>
-        <app-menu *ngIf="isMenuVisible" (closeMenu)="hideMenu()"></app-menu>
     </div>
     <!-- Colonna sinistra con burger menu e scritte -->
     <div class="col-4 my-auto d-flex flex-column flex-lg-row justify-content-between align-items-center">

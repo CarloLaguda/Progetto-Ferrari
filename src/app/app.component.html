@@ -1,3 +1,4 @@
 <div class="container-fluid">
-  <app-navbar></app-navbar>
+  <app-navbar (menuToggle)="toggleMenu()"></app-navbar>
+  <app-menu *ngIf="isMenuVisible" (closeMenu)="hideMenu()"></app-menu>
 </div>

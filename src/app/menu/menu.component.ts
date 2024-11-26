@@ -7,11 +7,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './menu.component.css'
 })
 export class MenuComponent {
-  // EventEmitter per notificare la chiusura del menu
+  // Evento per emettere quando il menu deve essere chiuso
   @Output() closeMenu = new EventEmitter<void>();
 
-  // Metodo per chiudere il menu
-  close() {
+  // Metodo chiamato quando il bottone "×" viene cliccato
+  onClose(): void {
     this.closeMenu.emit();
   }
 }

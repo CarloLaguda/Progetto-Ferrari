@@ -11,4 +11,14 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'Ferrari';
+  isMenuVisible: boolean = false;
+
+  // Metodo per alternare la visibilità del menu
+  toggleMenu(): void {
+    this.isMenuVisible = !this.isMenuVisible;
+  }
+  // Metodo per nascondere il menu quando viene emesso l'evento closeMenu
+  hideMenu(): void {
+    this.isMenuVisible = false;
+  }
 }

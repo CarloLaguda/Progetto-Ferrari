@@ -15,16 +15,10 @@ export class NavbarComponent {
   Link4 = "Musei"
   Link5 = "Collezione"
   Link6 = "Info"
-
-  // Variabile per controllare la visibilità del menu
-  isMenuVisible: boolean = false;
-
-  // Metodo per alternare la visibilità del menu
-  toggleMenu(): void {
-    this.isMenuVisible = !this.isMenuVisible;
-  }
-  // Metodo per nascondere il menu quando viene emesso l'evento closeMenu
-  hideMenu(): void {
-    this.isMenuVisible = false;
+  
+  @Output() menuToggle = new EventEmitter<void>();
+  // Metodo chiamato quando il bottone del menu viene cliccato
+  onMenuClick(): void {
+    this.menuToggle.emit();
   }
 }

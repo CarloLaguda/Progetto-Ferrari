@@ -1,4 +1,15 @@
 <div id="fullscreenDiv" class="position-fixed top-0 start-0 w-100 h-100 bg-menu d-flex justify-content-center align-items-center" style="z-index: 1050;">
-    <button (click)="close()" id="closeButton" class="btn btn-light position-absolute top-0 end-0 m-3">&times;</button>
-  <h1 class="text-white">Contenuto del Div</h1>
+  <img src="logo-ferrari.png" class="position-absolute top-0 mt-1" id="img-logo-menu" alt="Logo">
+  <!-- Bottone per chiudere -->
+  <button (click)="onClose()" id="closeButton" class="btn fs-5 btn-light position-absolute top-0 end-0 m-4">&times;</button>
+  <div class="row conatiner-fluid mt-5">
+    <div class="col-12 fs-2 my-auto text-center">
+      <p class="text-light mt-4" style="cursor: pointer;">Racing</p>
+      <p class="text-light mt-4" style="cursor: pointer;">Cars</p>
+      <p class="text-light mt-4" style="cursor: pointer;">Storia</p>
+      <p class="text-light mt-4" style="cursor: pointer;">Musei</p>
+      <p class="text-light mt-4" style="cursor: pointer;">Collezione</p>
+      <p class="text-light mt-4" style="cursor: pointer;">Info</p>
+    </div>
+  </div>
 </div>
