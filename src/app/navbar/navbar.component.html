@@ -1,5 +1,5 @@
 <div class="row bg-navbar sticky-top">
-    <div class="col-1 my-auto bg-primary">
+    <div class="col-1 my-auto">
         <div class="btn d-lg-none">
             <i (click)="onMenuClick()" class="bi bi-list text-light display-3 "></i>
         </div>
@@ -7,8 +7,8 @@
     <!-- Colonna sinistra con burger menu e scritte -->
     <div class="col-4 my-auto d-flex flex-column flex-lg-row justify-content-between align-items-center">
         <!-- Scritte orizzontali visibili da md in su -->
-        <div class="mx-3">
-            <h3 class="text-light d-none d-lg-block" style="cursor: pointer;">{{Link1}}</h3>
+        <div class="mx-3 btn">
+            <h3 (click)="onRacingClick()" class="text-light d-none d-lg-block" style="cursor: pointer;">{{Link1}}</h3>
         </div>
         <div class="mx-3">
             <h3 class="text-light d-none d-lg-block" style="cursor: pointer;">{{Link2}}</h3>

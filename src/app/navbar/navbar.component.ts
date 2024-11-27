@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, OnInit  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 CommonModule
 @Component({
@@ -14,19 +14,14 @@ export class NavbarComponent {
   Link4 = "Musei"
   Link5 = "Collezioni"
   Link6 = "Info"
-  
   @Output() menuToggle = new EventEmitter<void>();
   // Metodo chiamato quando il bottone del menu viene cliccato
   onMenuClick(): void {
     this.menuToggle.emit();
   }
-  refreshAndScrollToTop(): void {
-    // Porta la posizione di scroll in cima
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    
-    // Ricarica la pagina dopo un breve ritardo
-    setTimeout(() => {
-      window.location.reload();
-    },600); // Attendi mezzo secondo per permettere lo scroll
+  @Output() racingClicked = new EventEmitter<void>(); // Evento emesso al clic
+  // Metodo chiamato quando l'utente clicca sul <h3>
+  onRacingClick(): void {
+    this.racingClicked.emit(); // Notifica il padre (AppComponent)
   }
 }

@@ -1,4 +1,5 @@
 <div class="container-fluid">
-  <app-navbar (menuToggle)="toggleMenu()"></app-navbar>
+  <app-navbar (menuToggle)="toggleMenu()"(racingClicked)="showRacing()"></app-navbar>
   <app-menu *ngIf="isMenuVisible" (closeMenu)="hideMenu()"></app-menu>
+  <app-racing *ngIf="isRacingVisible"></app-racing>
 </div>
